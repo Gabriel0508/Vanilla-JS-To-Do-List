@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titilluim Web";
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.input-group {
+  box-shadow: rgba(255, 255, 255, 0.4) 0rem 1.2rem 3.2rem -0.7rem;
+  height: 8vh;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.container {
+  width: 50%;
+}
+
+.todo-items {
+  cursor: pointer;
+  width: 100%;
+  display: inline-grid;
+  box-shadow: rgba(255, 255, 255, 0.4) 0rem 1.2rem 3.2rem -0.7rem;
+  height: 8vh;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
