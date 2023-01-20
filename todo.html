@@ -13,15 +13,17 @@
 <body>
  
   <!--TO DO template-->
-  <main class="main">
-    <header class="container">
+  <main>
+    <section class="todo mt-5 p-1">
+      <header class="container">
         <div class="container-fluid text-center">
-            <a href="./todo.html" class="text-decoration-none text-danger fs-1">To Do</a>
+          <a href="./todo.html" class="text-decoration-none fs-1 fw-bold">todos</a>
         </div>
-        <div  class="input-group mb-3">
-          <input type="text" class="form-control" id="new-item" placeholder="What needs to be done ?" />
-          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-angles-down"></i></span>
+        <div  class="input-group">
+          <input type="text" class="form-control" id="new-item" placeholder="What needs to be done?"/>
+          <span class="input-group-text"><i class="fas fa-angle-double-down" id="toggle-items"></i></span>
         </div>
+        <label class="px-2" id="error-text">Add a item that needs to be done!</label>
     </header>
 
     <!--To do's items template-->
@@ -29,6 +31,7 @@
         <ul class="todo-items list-unstyled" id="items-list">
 
         </ul>
+    </section>
     </section>
   </main>
     <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>

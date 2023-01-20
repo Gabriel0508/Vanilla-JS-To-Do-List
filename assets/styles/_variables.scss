@@ -1,0 +1,25 @@
+$black-cow: #4d4d4d;
+$smokey-grey: #737373;
+$storm-grey: #777;
+$dawn-pinkl: #ededed;
+$dark-rose: #af5b5e;
+$dark-red: #840000;
+$dark-grey-blue: #30525B;
+$fountain-blue: #52B2B6;
+$alabaster: #F9FCFC;
+
+$theme-colors: () !default;
+$theme-colors: map-merge (
+    (
+      "black-cow": $black-cow,
+      "smokey-grey": $smokey-grey,
+      "storm-grey": $storm-grey,
+      "dawn-pinkl": $dawn-pinkl,
+      "dark-rose": $dark-rose,
+      "dark-red": $dark-red,
+      "dark-grey-blue": $dark-grey-blue,
+      "fountain-blue": $fountain-blue,
+      "alabaster": $alabaster
+    ),
+  $theme-colors
+);
