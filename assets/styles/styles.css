@@ -61,12 +61,12 @@ main .todo input:focus {
 }
 
 #error-text {
-  color: #840000;
+  color: #F70C18;
   display: none;
 }
 
 .input-error {
-  border: 0.1rem solid #840000;
+  border: 0.1rem solid #F70C18;
 }
 
 @media screen and (max-width: 900px) {
