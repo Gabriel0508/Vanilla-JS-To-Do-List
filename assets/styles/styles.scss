@@ -83,7 +83,7 @@ main {
     right: 0;
     border-top-color: transparent;
     border-left-color: transparent;
-    border-bottom-color: $dark-grey-blue;
+    border-bottom-color: $dark-red;
     border-right-color: $dawn-pinkl;
   }
   &::before {
@@ -91,7 +91,7 @@ main {
     left: 0;
     border-bottom-color: transparent;
     border-right-color: transparent;
-    border-top-color: $dark-grey-blue;
+    border-top-color: $dark-red;
     border-left-color: $dawn-pinkl;
   }
   &:hover::after,
@@ -102,8 +102,9 @@ main {
 }
 
 //count items 
-.todo-count {
+#count-items {
   color: $dark-grey-blue;
+  font-weight: bolder;
   display: none;
 }
 

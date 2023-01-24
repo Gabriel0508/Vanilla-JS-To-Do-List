@@ -77,7 +77,7 @@ main .todo input:focus {
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color: #30525B;
+  border-bottom-color: #F70C18;
   border-right-color: #ededed;
 }
 .delete-btn::before {
@@ -85,7 +85,7 @@ main .todo input:focus {
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  border-top-color: #30525B;
+  border-top-color: #F70C18;
   border-left-color: #ededed;
 }
 .delete-btn:hover::after, .delete-btn:hover::before {
@@ -93,8 +93,9 @@ main .todo input:focus {
   height: 100%;
 }
 
-.todo-count {
+#count-items {
   color: #30525B;
+  font-weight: bolder;
   display: none;
 }
 
