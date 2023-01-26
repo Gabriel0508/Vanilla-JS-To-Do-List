@@ -7,7 +7,10 @@ const addNewItem = () => {
   const itemsToggle = document.getElementById("toggle-items");
   const countItems = document.getElementById("count-items");
   const completedItems = document.getElementById("completed-items");
-  const KEY_ENTER = 13;
+
+  console.log('Oare ce este itemsToggle?');
+  console.log(itemsToggle);
+
 
   newItem.addEventListener("keypress", (event) => {
     //event.preventDefault();
@@ -38,7 +41,7 @@ const addNewItem = () => {
     checkbox.style.marginRight = "0.3rem";
 
     //check the enter key
-    if (event.keyCode === KEY_ENTER) {
+    if (event.key === "Enter") {
       if (itemText === "") {
         newItem.classList.add("input-error");
         error.style.display = "flex";
@@ -122,6 +125,8 @@ const addNewItem = () => {
      * Toggle all todos items
      */
     itemsToggle.addEventListener("click", () => {
+      console.log('Se pare ca ia click');
+      console.log('Se pare ca face ce vrea');
       items.classList.toggle("d-none");
       //TODO: use another approach (doesn't work correctly)
       if (items.classList.contains("d-none")) {
@@ -134,3 +139,4 @@ const addNewItem = () => {
 };
 
 addNewItem();
+
