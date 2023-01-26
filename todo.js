@@ -59,9 +59,12 @@ const addNewItem = () => {
       liItemsElement.classList.add("li-item");
       items.prepend(liItemsElement);
 
-      //reset the item value
+      //reset the input value
       newItem.value = "";
     }
+
+    let i = 0;
+    let itemCount = 0;
 
     /**
      * Check if the checkbox is checked or not
@@ -72,6 +75,10 @@ const addNewItem = () => {
         liItemsElement.style.color = "#777";
         completedItems.style.display = "flex";
         completedItems.innerHTML = "Clear completed items";
+        while (items.getElementsByTagName("li")[i--]) {
+          itemCount--;
+        }
+        //countItems.innerHTML = itemCount + " item left";
       } else {
         liItemsElement.style.textDecoration = "none";
         liItemsElement.style.color = "#30525B";
@@ -84,11 +91,10 @@ const addNewItem = () => {
      * Check the li elements in the ul list
      */
     if (items.getElementsByTagName("li").length > 0) {
-      countItems.style.display = "flex";
-      countItems.innerHTML =
-        items.getElementsByTagName("li").length + " item left";
-    } else {
-      countItems.style.display = "none";
+      while (items.getElementsByTagName("li")[i++]) {
+        itemCount++;
+      }
+      countItems.innerHTML = itemCount + " item left";
     }
 
     /**
@@ -103,7 +109,7 @@ const addNewItem = () => {
     /**
      * Delete completed items
      */
-    completedItems.addEventListener("click", (item) => {
+    completedItems.addEventListener("click", (item) => {//TODO: refatore because doesn't work
       let children = items.childNodes;
       for (let i = 0; i < children.length; i++) {
         if (children[i].firstChild.checked) {
@@ -116,17 +122,14 @@ const addNewItem = () => {
      * Toggle all todos items
      */
     itemsToggle.addEventListener("click", () => {
+      items.classList.toggle("d-none");
       //TODO: use another approach (doesn't work correctly)
-      if (items.getElementsByTagName("li").length > 0) {
+      if (items.classList.contains("d-none")) {
         itemsToggle.innerHTML = '<i class="fas fa-angle-double-up"></i>';
-        items.classList.toggle("toggle-all");
+      } else {
+        itemsToggle.innerHTML = '<i class="fas fa-angle-double-down"></i>';
       }
     });
-
-    //Count the todos items
-    // window.addEventListener("load", () => {
-    //   countItems.innerHTML = items.getElementsByTagName("li").length + " item left";
-    // });
   });
 };
 

@@ -20,7 +20,7 @@ main {
 main .todo {
   width: 40%;
   height: auto;
-  background: rgba(48, 82, 91, 0.2);
+  background: rgba(48, 82, 91, 0.4);
   -webkit-backdrop-filter: blur(0.6rem);
           backdrop-filter: blur(0.6rem);
 }
@@ -29,6 +29,8 @@ main .todo a {
 }
 main .todo input {
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 1.2rem 3.2rem -0.7rem;
+  color: #30525B !important;
+  font-size: 1.2rem;
   height: 6vh;
 }
 main .todo input .form-control:focus {
@@ -36,6 +38,21 @@ main .todo input .form-control:focus {
 }
 main .todo input:focus {
   box-shadow: none !important;
+}
+main .todo input::-moz-placeholder {
+  color: #737373;
+  font-family: cursive;
+  opacity: 0.6;
+}
+main .todo input:-ms-input-placeholder {
+  color: #737373;
+  font-family: cursive;
+  opacity: 0.6;
+}
+main .todo input::placeholder {
+  color: #737373;
+  font-family: cursive;
+  opacity: 0.6;
 }
 
 .li-item {
@@ -101,13 +118,11 @@ main .todo input:focus {
 #count-items {
   color: #30525B;
   font-weight: bolder;
-  display: none;
 }
 
 #completed-items {
   cursor: pointer;
   color: #30525B;
-  display: none;
   transition: all 0.6s ease-in;
 }
 #completed-items:hover {
@@ -126,10 +141,6 @@ main .todo input:focus {
 #toggle-items:hover {
   color: #F9FCFC;
   background-color: #30525B;
-}
-
-.toggle-all {
-  display: none;
 }
 
 #error-text {

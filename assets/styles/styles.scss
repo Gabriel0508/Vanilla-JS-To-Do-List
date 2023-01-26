@@ -22,13 +22,15 @@ main {
   .todo {
     width: 40%;
     height: auto;
-    background: transparentize($color: $dark-grey-blue, $amount: 0.8);
+    background: transparentize($color: $dark-grey-blue, $amount: 0.6);
     backdrop-filter: blur(0.6rem);
     a {
       color: $alabaster;
     }
     input {
       box-shadow: rgba(0, 0, 0, 0.1) 0rem 1.2rem 3.2rem -0.7rem;
+      color: $dark-grey-blue !important;
+      font-size: 1.2rem;
       height: 6vh;
       .form-control {
         &:focus {
@@ -37,6 +39,11 @@ main {
       }
       &:focus {
         box-shadow: none !important;
+      }
+      &::placeholder {
+        color: $smokey-grey;
+        font-family:cursive;
+        opacity: 0.6;
       }
     }
   }
@@ -71,14 +78,14 @@ main {
   transition: color 0.4s ease;
   &::after,
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 20%;
     height: 20%;
-    border: .1rem solid;
+    border: 0.1rem solid;
     transition: all 0.4s ease;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
   }
   &::after {
     bottom: 0;
@@ -106,18 +113,16 @@ main {
   }
 }
 
-//count items 
+//count items
 #count-items {
   color: $dark-grey-blue;
   font-weight: bolder;
-  display: none;
 }
 
-//completed items 
+//completed items
 #completed-items {
   cursor: pointer;
   color: $dark-grey-blue;
-  display: none;
   transition: all 0.6s ease-in;
   &:hover {
     text-decoration: underline;
@@ -136,10 +141,6 @@ main {
     color: $alabaster;
     background-color: $dark-grey-blue;
   }
-}
-
-.toggle-all {
-  display: none;
 }
 
 //error message
