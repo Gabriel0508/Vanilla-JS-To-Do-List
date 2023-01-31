@@ -1,101 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.min.css">
-  <link rel="stylesheet" href="./assets/google-fonts/Titillium_Web/TitilliumWeb-Regular.ttf">
-  <link rel="stylesheet" href="./assets/styles/styles.css">
-  <title>TO DO List</title>
-</head>
-
-<body>
-
-  <!--TO DO template-->
-  <main>
-    <section data-to-do-list class="todo mt-5 p-1">
-      <header class="container">
-        <div class="container-fluid text-center">
-          <a href="./todo.html" class="text-decoration-none fs-1 fw-bold">todos</a>
-        </div>
-        <div class="input-group col-md-4">
-          <input id="new-item" class="form-control py-2" type="text" placeholder="What needs to be done?" />
-          <span class="input-group-append">
-            <button data-to-do-toggle class="btn btn-outline-secondary" type="button">
-              <i class="fas fa-angle-double-down"></i>
-            </button>
-          </span>
-        </div>
-        <span class="px-2 fs-5" id="error-text"></span>
-      </header>
-
-      <!--To do's items template-->
-      <div class="container mt-2">
-        <ul class="todo-items list-unstyled" id="items-list"></ul>
-      </div>
-
-      <!-- This should be `0 items left` by default -->
-      <div class="container d-flex align-items-center justify-content-between">
-        <span id="count-items"></span>
-        <span id="completed-items"></span>
-      </div>
-
-      <!--Created by-->
-      <div class="text-center mt-3 mb-2">
-        <a href="https://github.com/Gabriel0508/Vanilla-JS-To-Do-List" target="_blank" class="text-decoration-none">
-          <i class="fa-sharp fa-solid fa-copyright mx-1"></i>
-          Gabriel Grad
-        </a>
-      </div>
-    </section>
-  </main>
-
-
-  <main>
-    <section data-to-do-list class="todo mt-5 p-1">
-      <header class="container">
-        <div class="container-fluid text-center">
-          <a href="./todo.html" class="text-decoration-none fs-1 fw-bold">todos</a>
-        </div>
-        <div class="input-group col-md-4">
-          <input id="new-item" class="form-control py-2" type="text" placeholder="What needs to be done?" />
-          <span class="input-group-append">
-            <button data-to-do-toggle class="btn btn-outline-secondary" type="button">
-              <i class="fas fa-angle-double-down"></i>
-            </button>
-          </span>
-        </div>
-        <span class="px-2 fs-5" id="error-text"></span>
-      </header>
-
-      <!--To do's items template-->
-      <div class="container mt-2">
-        <ul class="todo-items list-unstyled" id="items-list"></ul>
-      </div>
-
-      <!-- This should be `0 items left` by default -->
-      <div class="container d-flex align-items-center justify-content-between">
-        <span id="count-items"></span>
-        <span id="completed-items"></span>
-      </div>
-
-      <!--Created by-->
-      <div class="text-center mt-3 mb-2">
-        <a href="https://github.com/Gabriel0508/Vanilla-JS-To-Do-List" target="_blank" class="text-decoration-none">
-          <i class="fa-sharp fa-solid fa-copyright mx-1"></i>
-          Gabriel Grad
-        </a>
-      </div>
-    </section>
-  </main>
-
- 
-  <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-  <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./todo.js"></script>
-</body>
-
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TODOS</title>
+		<link rel="stylesheet" href="./assets/styles/styles.css">
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<!-- This section should be hidden by default and shown when there are todos -->
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list"></ul>
+			</section>
+			<!-- This footer should hidden by default and shown when there are todos -->
+			<footer class="footer">
+				<!-- This should be `0 items left` by default -->
+				<span class="todo-count"><strong>0</strong> item left</span>
+				<!-- Hidden if no completed items are left ↓ -->
+				<button class="clear-completed">Clear completed</button>
+			</footer>
+		</section>
+		<footer class="info">
+			<!-- Remove the below line ↓ -->
+			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+			<!-- Change this out with your name and url ↓ -->
+		</footer>
+		<script src="./todo.js"></script>
+	</body>
 </html>
