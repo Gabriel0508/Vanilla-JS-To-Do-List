@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TODOS APP</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./todo.css">
+	<title>TODOS</title>
 </head>
 
 <body>
@@ -31,26 +32,6 @@
 		<p>Created by <a href="https://github.com/Gabriel0508/" target="_blank">Gabriel Grad</a></p>
 		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 	</footer>
-
-
-	<main data-todo-app class="todoapp">
-		<header class="header">
-			<h1>todos</h1>
-			<input data-todo-new class="new-todo" placeholder="What needs to be done?" autofocus>
-		</header>
-		<!-- This section should be hidden by default and shown when there are todos -->
-		<section class="todo-container">
-			<input id="toggle-all" class="toggle-all" type="checkbox">
-			<label for="toggle-all">Mark all as complete</label>
-			<ul data-todo-list class="todo-list"></ul>
-		</section>
-		<!-- This footer should hidden by default and shown when there are todos -->
-		<footer data-todo-footer class="footer">
-			<span data-todo-count class="todo-count"></span>
-			<!-- Hidden if no completed items are left ↓ -->
-			<button data-todo-completed class="clear-completed">Clear completed</button>
-		</footer>
-	</main>
 	<script src="./todo.js"></script>
 </body>
 
